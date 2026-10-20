@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация и списки</title>
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li class="active"><a href="info.html">Информация</a></li>
+            <li><a href="info.html#section-lists">К спискам</a></li>
+            <li><a href="forms.html"><img src="img/icon.png" alt="Формы" width="30"></a></li>
+            <li><a href="dom_read.html">DOM (чтение)</a></li>
+            <li><a href="dom_change.html">DOM (изменение)</a></li>
+            <li><a href="algo.html">Задача 1014</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+ 
+    <main style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <p style="text-align: right;">
+            <a href="#section-lists">К спискам</a> | 
+            <a href="#section-table">К таблице</a> | 
+            <a href="#">К началу страницы</a>
+        </p> 
+        <h2 id="section-lists">Списки и изображения</h2>
+        
+        <h3>Популярные направления:</h3>
+        <ul>
+            <li>Европа:
+                <ol>
+                    <li>Париж, Франция</li>
+                    <li>Рим, Италия</li>
+                </ol>
+            </li>
+            <li>Азия: Таиланд, Вьетнам</li>
+            <li>СНГ: Грузия, Армения</li>
+        </ul>
+        <hr>
+
+        <h3>Изображение с подписью:</h3>
+        <figure>
+            <img src="img/photo1.jpg" alt="Тестовое изображение" style="max-width: 100%; height: auto;">
+            <figcaption>Рис. 1. Музыка.</figcaption>
+        </figure>
+
+        <hr>
+
+        <h3>Миниатюра большого изображения:</h3>
+        <p>Нажмите на картинку ниже, чтобы открыть полноразмерную версию в новой вкладке:</p>
+        <a href="img/large.jpg" target="_blank">
+            <img src="img/large.jpg" width="100" alt="Миниатюра">
+        </a>
+
+        <hr>
+
+        <h3 id="section-table">Специальная таблица:</h3>
+        <table class="special-table">
+            <tr>
+                <th>Страна</th>
+                <th>Особенности</th>
+            </tr>
+            <tr>
+                <td><img src="img/photo2.jpg" alt="Картинка в таблице" width="150"></td>
+                <td><a href="https://github.com/vmarshirov" target="_blank">Ссылка на GitHub</a></td>
+            </tr>
+        </table>
+    </main>  
+</body>
+</html>

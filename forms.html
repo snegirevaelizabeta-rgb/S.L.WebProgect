@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы и ввод данных</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="info.html#section-lists">К спискам</a></li>
+            <li class="active"><a href="forms.html"><img src="img/icon.png" alt="Формы" width="30"></a></li>
+            <li><a href="dom_read.html">DOM (чтение)</a></li>
+            <li><a href="dom_change.html">DOM (изменение)</a></li>
+            <li><a href="algo.html">Задача 1014</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding: 20px;">
+        <h2>Форма 1: Контактные данные</h2>
+        
+        <form action="https://httpbin.org/post" method="POST">
+            <p>Фамилия: <input type="text" name="surname"></p>
+            <p>Имя: <input type="text" name="firstname"></p>
+            <p>Группа: <input type="text" name="group"></p>
+            <p>Телефон: <input type="tel" name="phone"></p>
+            <p>Email: <input type="email" name="email"></p>
+            <p>Дата: <input type="date" name="date"></p>
+            <button type="submit">Отправить</button>
+        </form>
+
+        <hr>
+
+        <h2>Форма 2: Заказ</h2>
+        
+        <form action="https://httpbin.org/post" method="POST">
+            <input type="hidden" name="id" value="1014">
+            
+            <p>Товар: <input type="text" name="product"></p>
+            <p>Количество: <input type="number" name="count" value="1"></p>
+            
+            <p>Доставка:</p>
+            <p><input type="radio" name="delivery" value="courier" checked> Курьер</p>
+            <p><input type="radio" name="delivery" value="pickup"> Самовывоз</p>
+            
+            <p><input type="checkbox" name="agree" value="yes" checked> Согласен</p>
+            
+            <p>Дата: <input type="date" name="delivery_date"></p>
+            <p>Пароль: <input type="password" name="pass"></p>
+            
+            <button type="submit">Заказать</button>
+        </form>
+    </main>
+</body>
+</html>

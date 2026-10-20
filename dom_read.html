@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_JS. Считываем информацию из DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="info.html#section-lists">К спискам</a></li>
+            <li><a href="forms.html"><img src="img/icon.png" alt="Формы" width="30"></a></li>
+            <li class="active"><a href="dom_read.html">DOM (чтение)</a></li>
+            <li><a href="dom_change.html">DOM (изменение)</a></li>
+            <li><a href="algo.html">Задача 1014</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding: 20px; max-width: 700px; margin: 0 auto;">
+        <h1>DOM_JS. Считываем информацию из DOM</h1>
+        
+        <h2>Вторая страница паспорта</h2>
+        <p>Фамилия: <span>Снегирева</span></p>
+        <p>Имя: <span>Елизавета</span></p>
+        <p>Год рождения: <span>2007</span></p>
+
+        <h2>Третья страница паспорта</h2>
+        <p>Место рождения: <span>г. Москва</span></p>
+        <p>Дата выдачи: <span>01.01.2020</span></p>
+        <p>Код подразделения: <span>770-001</span></p>
+
+        <h2>Инструкция для получения данных из DOM</h2>
+        <p>Откройте консоль браузера (Cmd + Option + J) и введите команду:</p>
+        <pre style="background: #f0f0f0; padding: 10px; border: 1px solid #ccc;">document.getElementsByTagName('p')[2].childNodes[1].innerText</pre>
+        <p>Результат выполнения команды: <strong>2007</strong></p>
+
+        <h2>Скриншот работы консоли</h2>
+        <img src="img/screenshot_dom.jpg" alt="Скриншот консоли" style="max-width: 100%; border: 1px solid #ccc;">
+    </main>
+</body>
+</html>

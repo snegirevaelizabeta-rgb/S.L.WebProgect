@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="info.html#section-lists">К спискам</a></li>
+            <li><a href="forms.html"><img src="img/icon.png" alt="Формы" width="30"></a></li>
+            <li><a href="dom_read.html">DOM (чтение)</a></li>
+            <li class="active"><a href="dom_change.html">DOM (изменение)</a></li>
+            <li><a href="algo.html">Задача 1014</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding: 20px; max-width: 700px; margin: 0 auto;">
+        <h1>Изменяем кириллицу на латиницу по клику</h1>
+
+        <h2>Вторая страница паспорта</h2>
+        <div style="border: 2px solid #333; padding: 20px; margin-bottom: 20px;">
+            <p>Фамилия: <span id="surname">Снегирева</span></p>
+            <p>Имя: <span id="name">Елизавета</span></p>
+            <p>Отчество: <span id="patronymic">Дмитриевна</span></p>
+            <p>Год рождения: <span id="year">2007</span></p>
+        </div>
+        <button onclick="changeToLatin()" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #007bff; color: white; border: none;">Перевести в латиницу</button>
+    </main>
+
+    <script>
+        function changeToLatin() {
+            let surname = document.getElementById('surname');
+            surname.innerText = surname.innerText.replace(/С/g, 'S').replace(/с/g, 's').replace(/н/g, 'n').replace(/е/g, 'e').replace(/г/g, 'g').replace(/и/g, 'i').replace(/р/g, 'r').replace(/в/g, 'v').replace(/а/g, 'a');
+
+            let name = document.getElementById('name');
+            name.innerText = name.innerText.replace(/Е/g, 'E').replace(/л/g, 'l').replace(/и/g, 'i').replace(/з/g, 'z').replace(/а/g, 'a').replace(/в/g, 'v').replace(/е/g, 'e').replace(/т/g, 't');
+
+            let patronymic = document.getElementById('patronymic');
+            patronymic.innerText = patronymic.innerText.replace(/Д/g, 'D').replace(/м/g, 'm').replace(/и/g, 'i').replace(/т/g, 't').replace(/р/g, 'r').replace(/е/g, 'e').replace(/в/g, 'v').replace(/н/g, 'n').replace(/а/g, 'a');
+        }
+    </script>
+</body>
+</html>
